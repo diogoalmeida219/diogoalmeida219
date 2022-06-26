@@ -1,0 +1,311 @@
+Class endereco
+{
+public double cep {get;set;}
+public string rua {get;set;}
+public string numero {get;set;}
+public string bairro {get;set;}
+public string cidade {get;set;}
+public string estado {get;set;}
+public endereco()
+{
+cep = 0;
+rua = "";
+numero = "";
+bairro = "";
+cidade = "";
+estado = "";
+}
+public void end_cep(cep)
+{
+// Este método irá preencher rua,numero, bairro, cidade, estado
+automaticamente de acordo com CEP
+}
+public void cadastrar_end()
+{
+// Este método será para cadastrar um novo endereço
+}
+public void visualizar_end()
+71
+{
+// Este método será para visualizar um endereço cadastrado
+}
+public void alterar_end()
+{
+// Este método será para alterar um endereço cadastrado
+}
+public void excluir_end()
+{
+// Este método será para excluir um endereço cadastro
+}
+}
+Class usuario
+{
+public string nome {get;set;}
+public string email {get;set;}
+public string senha {set;}
+public endereco endereco;
+public usuario()
+{
+endereco = new endereco();
+nome = "";
+email = "";
+senha = "";
+}
+public bool login (senha, email)
+{
+// Este método servirá para verificar se o email e a senha está correta
+}
+72
+public void cadastrar_usuario()
+{
+// Este método será para cadastrar um usuario
+}
+public void visualizar_usuario()
+{
+// Este método será para visualizar um usuario cadastrado
+}
+public void alterar_usuario()
+{
+// Este método será para alterar um cadastro de um usuario
+}
+public void excluir_usuario()
+{
+// Este método será para excluir um usuario cadastrado
+}
+}
+Class imovel
+{
+public string nome {get;set;}
+public usuario proprietario;
+public imovel ()
+{
+proprietario = new usuario();
+nome = "";
+}
+public void cadastro_imovel ()
+73
+{
+// Este método será para cadastrar um novo imóvel
+}
+public void visualizar_imovel ()
+{
+// Este método será para ter informações do imóvel cadastrado
+}
+public void alterar_imovel ()
+{
+// Este método será para alterar o imovel
+}
+public void excluir_imovel ()
+{
+// Este método será para excluir um imovel
+}
+}
+Class bandeira
+{
+public double verde {get;}
+public double vermelha1 {get;}
+public double vermelha2 {get;}
+public double amarela {get;}
+public double hidrica {get;}
+public bandeira()
+{
+verde = 0;
+amarela = 1,87;
+vermelha1 = 4,16;
+vermelha2 = 9,49;
+74
+hidrica = 14,20;
+}
+public aplicar_bandeira ()
+{
+// Este método será para calcular o valor da bandeira
+}
+public reajuste_bandeira ()
+{
+// Este método será para alterar o valor de uma bandeira
+}
+}
+Class fornecedor
+{
+public double cnpj {get;set;}
+public string nome {get;set;}
+public double taxa {get;set;}
+public fornecedor()
+{
+cnpj = 0;
+nome = "";
+taxa = 0;
+}
+public void calcular_taxa ()
+{
+// Este método será para calcular o valor da taxa do fornecedor
+}
+public void cadastrar_fornecedor()
+{
+75
+// Este método será para cadastrar um fornecedor
+}
+public void visualizar_fornecedor()
+{
+// Este método será para visualizar um fornecedor cadastrado
+}
+public void alterar_fornecedor()
+{
+// Este método será para alterar um cadastro de um fornecedor
+}
+public void excluir_fornecedor()
+{
+// Este método será para excluir um fornecedor cadastrado
+}
+}
+Class Regiao
+{
+public string cidade {get;set;}
+public string estado {get;set;}
+public bandeira bandeira;
+public fornecedor fornecedor;
+public Regiao()
+{
+cidade = "";
+estado = "";
+bandeira = new bandeira();
+fornecedor = new fornecedor();
+}
+76
+public void definir_fornecedor (fornecedor)
+{
+// Este método será para definir um fornecedor por cidade
+}
+public void selecionar_bandeira(bandeira)
+{
+// Vai selecionar uma bandeira de acordo com o endereço.
+}
+public void cadastrar_regiao ()
+{
+// Este método será para cadastrar uma região
+}
+public void visualizar_regiao ()
+{
+// Este método será para visualizar uma região cadastrado
+}
+public void alterar_regiao ()
+{
+// Este método será para alterar uma região.
+}
+public void excluir_regiao ()
+{
+// Este método será para excluir uma região.
+}
+}
+Class eletronico
+{
+public string nome {get;set;}
+77
+public int kwh {get;set;}
+public int tensao {get;set;}
+public int amps {get;set;}
+public double uso_hora {get;set;}
+public int dias_uso {get;set}
+public int potencia {get;set;}
+public eletronico()
+{
+nome = "";
+kwh = 0;
+tensao = 0;
+horas_uso = 0;
+dias_uso = 0;
+amps = 0;
+potencia = 0;
+}
+public void cadastrar_eletro ()
+{
+// Este método será para cadastrar um eletrônico manualmente ou por
+foto
+}
+public void visualizar_eletro ()
+{
+// Este método será para visualizar as informações dos eletrônicos
+}
+public void alterar_eletro ()
+{
+// Este método será para alterar as informações de um eletrônico
+}
+78
+public void excluir_eletro ()
+{
+// Este método será para apagar um eletrônico
+}
+public void transformar_pot (tensao, amps)
+{
+// Este método será para transformar as informações secundárias em
+potência para os cálculos
+}
+public void transformar_dias (dias_uso)
+{
+// Este método será para transformar dias_uso em horas de uso para o
+cálculo
+}
+}
+Class conta
+{
+public double gasto_watts {get;set;}
+public double preco {get;set;}
+public double preco_total {get;set;}
+public imovel imovel;
+public eletronico dispositivo;
+public eletronico dispositivo1;
+public eletronico dispositivo2;
+public eletronico dispositivo3;
+public eletronico dispositivo4;
+public regiao regiao;
+public conta()
+{
+imovel = new imovel ();
+79
+dispositivo = new eletronico();
+dispositivo1 = new eletronico();
+dispositivo2 = new eletronico();
+dispositivo3 = new eletronico();
+dispositivo4 = new eletronico();
+regiao = new regiao();
+preco_total = 0;
+preco = 0;
+gasto_watts = 0;
+}
+public void gasto_total ()
+{
+// Este método irá calcular o kWh de os todos dispositivos e irá
+guardar no Gasto_watts
+}
+public void cal_total()
+{
+// Este método irá calcular o preço da kwh gastos por mês
+}
+public void aplicar_ban (regiao)
+{
+// Este método irá aplicar o método aplicar_bandeira()
+}
+public void aplicar_fornecedor (regiao)
+{
+// Este método irá aplicar a taxa de distribuição do fornecedor
+}
+public void relatorio_grafico ()
+{
+80
+// Este método irá mostrar todos os cálculos feitos em formato de
+gráfico
+}
+public void relatorio_data ()
+{
+// Este método irá mostrar os cálculos escolhendo a data de início e
+fim
+}
+public void calc_ind (preco)
+{
+// Este método irá calcular o preço do dispositivo individual
+// E irá ser aplicado fornecedor e a bandeira
+}
+public void relatorio_individual ()
+{
+// Este método irá mostrar os preços por eletrônico individual
+}
